@@ -1,1 +1,27 @@
-/* burger_style.css */
+body {
+	background: white;
+}
+
+div.logo {
+	text-align: center;
+	padding:25px;
+}
+
+div.logo img {
+	max-width: 250px;
+}
+
+div.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(2, 150px);
+	grid-gap: 10px;
+	max-width: 960px;
+	min-width: 480px;
+	margin: 0 auto;
+}
+
+div.item {
+	border: 1px solid black;
+	text-align: center;
+}
