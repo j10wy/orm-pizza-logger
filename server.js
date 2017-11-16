@@ -11,8 +11,9 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json 
 app.use(bodyParser.json());
+
 // Use the express.static built-in middleware to serve static files
-app.use(express.static('app/public/assets'));
+app.use(express.static('public/'));
 
 // Call Heroku's environment variable, if false use port 3000
 const PORT = process.env.PORT || 3000;

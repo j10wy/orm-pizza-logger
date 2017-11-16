@@ -8,13 +8,9 @@ router.get('/', function (req, res) {
 
 router.get("/pizza", function pizzaRoute(request, response) {
 
-	var results = pizza_model.selectAll(function (results) {
-		console.log(results);
+	pizza_model.selectAll(function (results) {
+		response.json(results);
 	});
-
-
-	//console.log(request.body);
-	response.json();
 
 });
 
