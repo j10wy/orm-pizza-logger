@@ -1,3 +1,11 @@
-const orm = require('../.config/orm');
+const orm = require('../config/orm');
 
-orm.selectAll();
+const pizza = {
+	selectAll: function (callback) {
+		orm.selectAll(function (resultsObject) {
+			callback(resultsObject);
+		});
+	}
+}
+
+module.exports = pizza;

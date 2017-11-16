@@ -1,6 +1,6 @@
 var sql = require('./connection');
 
-orm = {
+const orm = {
 	selectAll: selectAll,
 	insertOne: insertOne,
 	updateOne: updateOne
@@ -8,11 +8,13 @@ orm = {
 
 module.exports = orm;
 
-function selectAll() {
-	sql.query('SELECT * FROM pizzas', function (error, results) {
+// Keeping all function declarations below module.exports. I feel this makes the file a little more readable to humans, and works fine since these functions are hoisted at run-time.
+
+function selectAll(callback) {
+	return sql.query('SELECT * FROM pizzas', function (error, results) {
 		if (error) throw error;
-		console.log(results);
 		sql.end();
+		callback(results);
 	});
 }
 
@@ -20,6 +22,6 @@ function insertOne() {
 	console.log("insertOne");
 }
 
-function updateOne(){
+function updateOne() {
 	console.log("updateOne");
 }
