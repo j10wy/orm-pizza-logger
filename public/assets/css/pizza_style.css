@@ -14,7 +14,7 @@ div.logo img {
 div.container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 150px;
+	grid-template-rows: 1fr;
 	grid-gap: 10px;
 	max-width: 960px;
 	min-width: 480px;
@@ -24,4 +24,5 @@ div.container {
 div.item {
 	border: 1px solid black;
 	text-align: center;
+	min-height: 50px;
 }

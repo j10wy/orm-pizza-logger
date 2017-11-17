@@ -12,15 +12,27 @@ module.exports = orm;
 
 function selectAll(callback) {
 	sql.query('SELECT * FROM pizzas', function (error, results) {
-		if (error) throw error;
+		if (error) {
+			throw error;
+		}
 		callback(results);
 	});
 }
 
 function insertOne() {
-	console.log("insertOne");
+	sql.query('SELECT * FROM pizzas', function (error, results) {
+		if (error) {
+			throw error;
+		};
+		callback(results);
+	});
 }
 
 function updateOne() {
-	console.log("updateOne");
+	sql.query('SELECT * FROM pizzas', function (error, results) {
+		if (error) {
+			throw error;
+		};
+		callback(results);
+	});
 }
