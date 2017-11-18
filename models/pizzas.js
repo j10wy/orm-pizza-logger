@@ -11,8 +11,8 @@ const pizza = {
 			callback(resultsObject);
 		});
 	},
-	updateOne: function (devoured, id, callback) {
-		orm.updateOne(devoured, id, function (resultsObject) {
+	updateOne: function (devouredUpdate, callback) {
+		orm.updateOne(devouredUpdate, function (resultsObject) {
 			callback(resultsObject);
 		});
 	}

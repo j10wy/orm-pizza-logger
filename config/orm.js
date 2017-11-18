@@ -28,8 +28,9 @@ function insertOne(insertObj, callback) {
 	});
 }
 
-function updateOne(devoured, id, callback) {
-	sql.query('UPDATE pizzas SET devoured ? WHERE id = ?', [devoured, id], function (error, results) {
+function updateOne(devouredUpdateArray, callback) {
+	console.log(devouredUpdateArray);
+	sql.query('UPDATE pizzas SET devoured=? WHERE id=?', devouredUpdateArray, function (error, results) {
 		if (error) {
 			throw error;
 		};
