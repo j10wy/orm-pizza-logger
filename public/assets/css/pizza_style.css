@@ -23,7 +23,7 @@ div.pizzaStatus {
 }
 
 div.item {
-	border: 1px solid black;
+	border: 1px solid orange;
 	text-align: left;
 	min-height: 150px;
 	padding: 25px;
@@ -60,4 +60,9 @@ form#newPizzaForm input[type='submit'] {
 
 div[data-id] {
 	cursor: pointer;
+}
+
+div.pizza:hover {
+	background-color:orange;
+	color: darkred;
 }
