@@ -19,8 +19,8 @@ function selectAll(callback) {
 	});
 }
 
-function insertOne() {
-	sql.query('SELECT * FROM pizzas', function (error, results) {
+function insertOne(insertObj, callback) {
+	sql.query('INSERT INTO pizzas SET ?', insertObj, function (error, results) {
 		if (error) {
 			throw error;
 		};
@@ -28,8 +28,8 @@ function insertOne() {
 	});
 }
 
-function updateOne() {
-	sql.query('SELECT * FROM pizzas', function (error, results) {
+function updateOne(devoured, id, callback) {
+	sql.query('UPDATE pizzas SET devoured ? WHERE id = ?', [devoured, id], function (error, results) {
 		if (error) {
 			throw error;
 		};
